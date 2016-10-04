@@ -1,9 +1,19 @@
-public class Solution {
+package com.cds.leetcode;
 
-    public boolean isHappy(int n) {
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by cds on 24/7/16.
+ */
+public class HappyNumber {
+
+    private static List list = new ArrayList<Integer>();
+    public static boolean isHappy(int n) {
+
 
         int num = n;
-        List list = new ArrayList<Integer>();
+
         while (num != 1 ) {
 
             if (list.contains(num)) {
@@ -26,4 +36,9 @@ public class Solution {
         return true;
     }
 
+    public static void main(String[] args) {
+
+        System.out.println(isHappy(7));
+
+    }
 }
